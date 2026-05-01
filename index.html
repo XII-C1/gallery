@@ -29,14 +29,6 @@
     </nav>
 
     <div class="nav-actions">
-     <!-- Tombol Instagram dengan Logo SVG -->
-      <a href="https://instagram.com/twelveceone_" target="_blank" title="Instagram Kelas" style="width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card-strong);color:var(--ink);display:grid;place-items:center;text-decoration:none;transition:.25s;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-      </a>
       <button id="musicBtn" title="Musik">♪</button>
       <button id="themeBtn" title="Mode">☀</button>
     </div>
@@ -56,7 +48,8 @@
         <span>nggak akan pernah selesai.</span>
       </h1>
       <p class="desc">
-        Website kenangan kelas yang dibuat untuk menyimpan tawa, drama, dan momen random yang ternyata paling dirindukan.
+        Website kenangan kelas yang dibuat untuk menyimpan tawa, drama, tugas,
+        kantin, piket, foto blur, dan momen random yang ternyata paling dirindukan.
       </p>
 
       <div class="hero-buttons">
@@ -663,6 +656,10 @@
   </footer>
 
 <audio id="memoryAudio" preload="metadata"></audio>
+
+<!-- Load Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
 
   <script src="script.js"></script>
 </body>
