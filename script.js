@@ -1,3 +1,26 @@
+/* ================================
+   FIREBASE CONFIGURATION
+================================ */
+// Masukin kode yang kamu dapet dari konsol Firebase tadi di sini
+const firebaseConfig = {
+  apiKey: "AIzaSyDMxFEP87qzw-BBOQs-XlMZzDJ-ZyeUcw8",
+  authDomain: "yearbook-xii-c1.firebaseapp.com",
+  databaseURL: "https://yearbook-xii-c1-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "yearbook-xii-c1",
+  storageBucket: "yearbook-xii-c1.firebasestorage.app",
+  messagingSenderId: "33633849648",
+  appId: "1:33633849648:web:c5bc9211fc9bf0dca8b8f5",
+};
+
+// Inisialisasi Firebase
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
+// KODE BAWAAN KAMU LANJUT DI BAWAHNYA...
+const $ = (selector, parent = document) => parent.querySelector(selector);
+const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
+
+
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
 
@@ -658,64 +681,54 @@ if(modal){
 }
 
 /* ================================
-   SURAT MASA DEPAN
+   SURAT MASA DEPAN (SHARED DATABASE)
 ================================ */
-
 const letterForm = $("#letterForm");
-const letterName = $("#letterName");
-const letterMessage = $("#letterMessage");
 const lettersList = $("#lettersList");
 
-let letters = JSON.parse(localStorage.getItem("memory-letters") || "[]");
-
-function renderLetters(){
+// Baca data Surat dari Firebase secara Realtime
+database.ref('letters').on('value', (snapshot) => {
+  const data = snapshot.val();
   if(!lettersList) return;
 
-  if(letters.length === 0){
-    lettersList.innerHTML = `
-      <div class="saved-letter">
-        <b>Belum ada surat</b>
-        <p>Jadilah yang pertama menulis pesan untuk masa depan.</p>
-      </div>
-    `;
+  if(!data) {
+    lettersList.innerHTML = `<div class="saved-letter"><b>Belum ada surat</b></div>`;
     return;
   }
 
-  lettersList.innerHTML = letters.map(letter => `
+  const items = Object.keys(data).map(key => data[key]).reverse();
+  
+  lettersList.innerHTML = items.map(item => `
     <div class="saved-letter">
-      <b>${letter.name}</b>
-      <p>${letter.message}</p>
+      <b>${escapeText(item.name)}</b>
+      <p>${escapeText(item.message)}</p>
     </div>
   `).join("");
-}
+});
 
+// Simpan surat ke Firebase
 if(letterForm){
-  letterForm.addEventListener("submit", event => {
-    event.preventDefault();
+  letterForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const name = $("#letterName").value.trim();
+    const message = $("#letterMessage").value.trim();
 
-    letters.unshift({
-      name:letterName.value.trim(),
-      message:letterMessage.value.trim()
-    });
-
-    localStorage.setItem("memory-letters", JSON.stringify(letters));
-
+    database.ref('letters').push({ name, message });
     letterForm.reset();
-    renderLetters();
 
     if(modal && modalBody){
-      modalBody.innerHTML = `
-        <h2>Surat Tersimpan 💌</h2>
-        <p>Pesanmu sudah masuk ke kapsul kenangan di browser ini.</p>
-      `;
-
+      modalBody.innerHTML = `<h2>Surat Terkirim! 💌</h2><p>Sekarang semua orang bisa baca pesanmu.</p>`;
       modal.classList.add("show");
     }
   });
 }
 
-renderLetters();
-
+// Fungsi pengaman teks biar gak dihack orang (XSS)
+function escapeText(text){
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
 /* ================================
    FINAL QUOTE
 ================================ */
@@ -913,59 +926,43 @@ if(generateAward){
   });
 }
 
-/* Kapsul waktu */
+/* ================================
+   KAPSUL WAKTU (SHARED DATABASE)
+================================ */
 const capsuleForm = $("#capsuleForm");
 const capsuleList = $("#capsuleList");
 
-let capsules = JSON.parse(localStorage.getItem("mini-time-capsules") || "[]");
-
-function escapeText(text){
-  return text
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
-}
-
-function renderCapsules(){
+// Baca data Kapsul dari Firebase secara Realtime
+database.ref('capsules').on('value', (snapshot) => {
+  const data = snapshot.val();
   if(!capsuleList) return;
-
-  if(capsules.length === 0){
-    capsuleList.innerHTML = `
-      <div class="capsule-item">
-        <b>Belum ada pesan</b>
-        <p>Tulis pesan pertama buat masa depan.</p>
-      </div>
-    `;
+  
+  if(!data) {
+    capsuleList.innerHTML = `<div class="capsule-item"><b>Belum ada pesan</b><p>Jadilah yang pertama.</p></div>`;
     return;
   }
 
-  capsuleList.innerHTML = capsules.slice(0, 6).map(item => `
+  const items = Object.keys(data).map(key => data[key]).reverse();
+  
+  capsuleList.innerHTML = items.slice(0, 6).map(item => `
     <div class="capsule-item">
       <b>${escapeText(item.name)}</b>
       <p>${escapeText(item.message)}</p>
     </div>
   `).join("");
-}
+});
 
+// Simpan data ke Firebase
 if(capsuleForm){
-  capsuleForm.addEventListener("submit", event => {
-    event.preventDefault();
+  capsuleForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const name = $("#capsuleName").value.trim();
+    const message = $("#capsuleMessage").value.trim();
 
-    capsules.unshift({
-      name:$("#capsuleName").value.trim(),
-      message:$("#capsuleMessage").value.trim()
-    });
-
-    localStorage.setItem("mini-time-capsules", JSON.stringify(capsules));
-
+    database.ref('capsules').push({ name, message });
     capsuleForm.reset();
-    renderCapsules();
   });
 }
-
-renderCapsules();
 
 
 /* ================================
