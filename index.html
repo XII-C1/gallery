@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenangan Kelas — Setelah Lulus</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="fireflies"></canvas>
+
+  <div class="falling-leaves" id="leaves"></div>
+
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <span>🌿</span>
+      <b>Memories Class - XII.C1</b>
+    </a>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">Cerita</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#friends">Teman</a>
+      <a href="#letters">Surat</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="musicBtn" title="Musik">♪</button>
+      <button id="themeBtn" title="Mode">☀</button>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+
+    <div class="sun"></div>
+
+    <div class="hero-text reveal">
+      <p class="label">Angkatan 2026 · XII.C1 Kelas Terbaik</p>
+      <h1>
+        Kita sudah lulus, tapi cerita kita
+        <span>nggak akan pernah selesai.</span>
+      </h1>
+      <p class="desc">
+        Website kenangan kelas yang dibuat untuk menyimpan tawa, drama, tugas,
+        kantin, piket, foto blur, dan momen random yang ternyata paling dirindukan.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#gallery" class="btn primary">Buka Kenangan</a>
+        <a href="#letters" class="btn soft">Tulis Surat</a>
+      </div>
+
+      <div class="memory-stats">
+        <div>
+          <strong data-count="36">0</strong>
+          <span>Siswa</span>
+        </div>
+        <div>
+          <strong data-count="2">0</strong>
+          <span>Tahun Cerita</span>
+        </div>
+        <div>
+          <strong data-count="999">0</strong>
+          <span>Kenangan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section story-section">
+    <div class="section-head reveal">
+      <p class="label">Cerita Kita</p>
+      <h2>Dulu cuma sekelas, sekarang jadi kenangan.</h2>
+      <p>
+        Dari awal masuk yang masih canggung, sampai akhirnya lulus sambil pura-pura kuat.
+        Semua hal kecil di kelas ternyata jadi bagian paling mahal.
+      </p>
+    </div>
+
+    <div class="story-grid">
+      <article class="story-card reveal tilt">
+        <span>🌅</span>
+        <h3>Pagi di Sekolah</h3>
+        <p>Datang telat, lari ke kelas, nyari alasan, lalu duduk seolah tidak terjadi apa-apa.</p>
+      </article>
+
+      <article class="story-card reveal tilt">
+        <span>🍃</span>
+        <h3>Jam Kosong</h3>
+        <p>Momen paling sakral. Ada yang tidur, main game, nyanyi, sampai bahas masa depan.</p>
+      </article>
+
+      <article class="story-card reveal tilt">
+        <span>🍜</span>
+        <h3>Kantin</h3>
+        <p>Tempat diskusi besar, kadang sering bolos ke kantin pas ada pelajaran, ada yang beli 3 bayarnya cuma 1.</p>
+      </article>
+
+      <article class="story-card reveal tilt">
+        <span>📚</span>
+        <h3>Tugas Deadline</h3>
+        <p>Dikerjakan malam terakhir, panik bareng, lalu tetap bilang “santai, aman.”</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section yearbook-section">
+    <div class="book reveal">
+      <div class="book-left">
+        <p class="label">Buku Kenangan</p>
+        <h2>Halaman yang akan kita buka lagi suatu hari nanti.</h2>
+        <p>
+          Mungkin nanti kita sudah sibuk dengan hidup masing-masing.
+          Tapi halaman ini tetap menyimpan versi kita yang pernah tertawa di ruangan yang sama.
+        </p>
+        <a href="buku.html" class="btn primary">Buka Buku</a>
+      </div>
+
+      <div class="book-right">
+  <div class="polaroid p1">
+    <img src="https://i.imgur.com/Xwuuq8M.jpeg" alt="Random Moment">
+    <span>Random Moment</span>
+  </div>
+
+  <div class="polaroid p2">
+    <img src="https://i.imgur.com/zoSnfXP.jpeg" alt="Random Moment">
+    <span>Random Moment</span>
+  </div>
+
+  <div class="polaroid p3">
+    <img src="https://i.imgur.com/oZZkkks.jpeg" alt="Random Moment">
+    <span>Random Moment</span>
+  </div>
+</div>
+  </section>
+
+ <section id="timeline" class="section timeline-section">
+  <div class="section-head reveal">
+    <p class="label">Timeline</p>
+    <h2>Perjalanan kecil yang rasanya besar.</h2>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item reveal">
+      <div class="dot"></div>
+
+      <div class="timeline-content">
+        <div class="timeline-text">
+          <span>Juli 2024</span>
+          <h3>Awal masuk</h3>
+          <p>
+            Masih saling hafalin nama, masih jaim, masih belum tahu siapa yang paling random.
+            Tahun pertama yang awalnya canggung, tapi justru jadi awal dari semua cerita.
+          </p>
+        </div>
+
+        <div class="timeline-photos">
+  <div class="timeline-polaroid tp1">
+    <img src="https://i.imgur.com/XFsvtvQ.jpeg" alt="Kenangan Juli 2024">
+    <span>Awal masuk</span>
+  </div>
+
+  <div class="timeline-polaroid tp2">
+    <img src="https://i.imgur.com/F05FDnb.jpeg" alt="Kenangan kelas 2024">
+    <span>Masih jaim</span>
+  </div>
+
+  <div class="timeline-polaroid tp3">
+    <img src="https://i.imgur.com/77u2ifh.jpeg" alt="Momen kelas 2024">
+    <span>Mulai kenal</span>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="dot"></div>
+
+      <div class="timeline-content">
+        <div class="timeline-text">
+          <span>Juli 2025</span>
+          <h3>Golden era</h3>
+          <p>
+            Sudah memasuki fase dimana kita saling berbagi moment, canda, dan tawa bersama.
+            Di saat itu kita belum memikirkan apapun untuk masa depan nanti.
+          </p>
+        </div>
+
+        <div class="timeline-photos">
+  <div class="timeline-polaroid tp1">
+    <img src="https://i.imgur.com/CsGnf7A.jpeg" alt="Golden era 2025">
+    <span>Golden era</span>
+  </div>
+
+  <div class="timeline-polaroid tp2">
+    <img src="https://i.imgur.com/DMU4NEp.jpeg" alt="Canda tawa 2025">
+    <span>Canda tawa</span>
+  </div>
+
+  <div class="timeline-polaroid tp3">
+    <img src="https://i.imgur.com/61LcHLb.jpeg" alt="Momen kelas 2025">
+    <span>Moment bareng</span>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="dot"></div>
+
+      <div class="timeline-content">
+        <div class="timeline-text">
+          <span>Januari 2026</span>
+          <h3>Fase akhir</h3>
+          <p>
+            Di saat itu kita sedang menghadapi ujian akhir dan juga berbagai kegiatan praktek.
+            Kita digempur habis-habisan oleh ujian praktek yang gak ada habisnya.
+          </p>
+        </div>
+
+        <div class="timeline-photos">
+  <div class="timeline-polaroid tp1">
+    <img src="https://i.imgur.com/KNF8LSQ.jpeg" alt="Fase akhir Januari 2026">
+    <span>Ujian akhir</span>
+  </div>
+
+  <div class="timeline-polaroid tp2">
+    <img src="https://i.imgur.com/Mk7Zhkr.jpeg" alt="Praktek kelas 2026">
+    <span>Praktek</span>
+  </div>
+
+  <div class="timeline-polaroid tp3">
+    <img src="https://i.imgur.com/XvKkHQK.jpeg" alt="Perjuangan akhir 2026">
+    <span>Perjuangan</span>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="dot"></div>
+
+      <div class="timeline-content">
+        <div class="timeline-text">
+          <span>Mei 2026</span>
+          <h3>Lulus</h3>
+          <p>
+            Hari yang ditunggu, tapi saat datang malah bikin berat buat pergi.
+            Moment kecil yang pernah kita lalui, dan juga kenangan yang akan kita bawa nanti.
+            Kita telah melewati segalanya bersama-sama.
+          </p>
+        </div>
+
+        <div class="timeline-photos">
+  <div class="timeline-polaroid tp1">
+    <img src="https://i.imgur.com/Z8x0DNx.jpeg" alt="Kelulusan 2026">
+    <span>Hari lulus</span>
+  </div>
+
+  <div class="timeline-polaroid tp2">
+    <img src="https://i.imgur.com/QXgCDSV.jpeg" alt="Foto bareng kelulusan">
+    <span>Foto bareng</span>
+  </div>
+
+  <div class="timeline-polaroid tp3">
+    <img src="https://i.imgur.com/4jp1Ji6.jpeg" alt="Perpisahan kelas">
+    <span>Perpisahan</span>
+  </div>
+</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <section id="gallery" class="section gallery-section">
+  <div class="section-head reveal">
+    <p class="label">Galeri</p>
+    <h2>Foto-foto yang nanti bikin senyum sendiri.</h2>
+  </div>
+
+  <div class="category-grid reveal">
+
+    <a 
+      href="kelulusan.html" 
+      class="category-card category-big"
+      style="--cover:url('https://i.imgur.com/sEpM1qD.jpeg');"
+    >
+      <div class="category-overlay">
+        <span>Klik untuk buka</span>
+        <h3>Hari Kelulusan</h3>
+        <p>Pelukan, tawa, dan mata yang sedikit berkaca-kaca.</p>
+      </div>
+    </a>
+
+    <a 
+      href="jamkosong.html" 
+      class="category-card"
+      style="--cover:url('https://i.imgur.com/mOdat90.jpeg');"
+    >
+      <div class="category-overlay">
+        <span>Klik untuk buka</span>
+        <h3>Jam Kosong</h3>
+        <p>Waktu terasa pelan.</p>
+      </div>
+    </a>
+
+    <a 
+      href="praktik.html" 
+      class="category-card"
+      style="--cover:url('https://i.imgur.com/O0Xr43B.jpeg');"
+    >
+      <div class="category-overlay">
+        <span>Klik untuk buka</span>
+        <h3>Praktik</h3>
+        <p>Panik tapi jadi.</p>
+      </div>
+    </a>
+
+    <a 
+      href="random-moment.html" 
+      class="category-card category-wide"
+      style="--cover:url('https://i.imgur.com/A8baoiq.jpeg');"
+    >
+      <div class="category-overlay">
+        <span>Klik untuk buka</span>
+        <h3>Moment Random</h3>
+        <p>Momen random terbaik.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+  <section id="friends" class="section friends-section">
+    <div class="section-head reveal">
+      <p class="label">Teman Kelas</p>
+      <h2>Orang-orang unik.</h2>
+    </div>
+
+    <div class="friends-grid">
+      <div class="friend reveal">
+        <div class="avatar">A</div>
+        <h3>Aziz</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">A</div>
+        <h3>Alfi</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">A</div>
+        <h3>Alhudri</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">A</div>
+        <h3>Alysaa</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">A</div>
+        <h3>Anjas</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">A</div>
+        <h3>Asilah</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">C</div>
+        <h3>Cinta</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">D</div>
+        <h3>Debi</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">D</div>
+        <h3>Dhiyaa</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">F</div>
+        <h3>Fadli</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">F</div>
+        <h3>Febri</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">H</div>
+        <h3>Hikmal</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">I</div>
+        <h3>Ilyas</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">J</div>
+        <h3>Jundi</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">K</div>
+        <h3>Kesa</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">K</div>
+        <h3>Keysa</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">L</div>
+        <h3>Lintang</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">M</div>
+        <h3>Maila</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">M</div>
+        <h3>Mawar</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">M</div>
+        <h3>Melisa</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">M</div>
+        <h3>Amor</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">M</div>
+        <h3>Raffi.N</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">M</div>
+        <h3>Satria</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">P</div>
+        <h3>Pirgi</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">R</div>
+        <h3>Rafi.A</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">R</div>
+        <h3>Rara</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">R</div>
+        <h3>Rian</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">R</div>
+        <h3>Ridho</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">R</div>
+        <h3>Rohmi</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">S</div>
+        <h3>Sakila</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">S</div>
+        <h3>Seva</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">S</div>
+        <h3>Ulan</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">S</div>
+        <h3>Syahrul</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">T</div>
+        <h3>Tiara</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">V</div>
+        <h3>Viana</h3>
+      </div>
+      <div class="friend reveal">
+        <div class="avatar">Z</div>
+        <h3>Winka</h3>
+      </div>
+    </div>
+  </section>
+
+ <section class="section features-section">
+  <div class="section-head reveal">
+    <p class="label">Fitur Kenangan</p>
+    <h2>Interaktif, manis, dan agak bikin kangen.</h2>
+  </div>
+
+  <div class="interactive-panel reveal">
+    <div class="feature-tabs">
+      <button class="feature-tab active" data-feature="playlist">
+        <span>🎧</span>
+        Playlist
+      </button>
+
+      <button class="feature-tab" data-feature="quotes">
+        <span>📝</span>
+        Quote
+      </button>
+
+      <button class="feature-tab" data-feature="awards">
+        <span>🏆</span>
+        Award
+      </button>
+
+      <button class="feature-tab" data-feature="capsule">
+        <span>🕰️</span>
+        Kapsul
+      </button>
+    </div>
+
+    <div class="feature-screen">
+
+      <article class="feature-page active" id="feature-playlist">
+        <div class="feature-info">
+          <p class="label">Playlist Nostalgia</p>
+          <h3 id="songTitle">Playlist Kenangan</h3>
+          <p id="songDesc">
+  Klik tombol play untuk memutar lagu kenangan.
+</p>
+        </div>
+
+        <div class="music-player">
+          <div class="vinyl" id="vinyl">
+            <div class="vinyl-core"></div>
+          </div>
+
+          <div class="player-controls">
+            <button id="prevSong" type="button">⏮</button>
+            <button id="playSong" type="button" class="main-control">▶</button>
+            <button id="nextSong" type="button">⏭</button>
+          </div>
+
+          <div class="song-progress">
+            <span id="songTime">00:00</span>
+            <div class="song-bar">
+              <i id="songBar"></i>
+            </div>
+            <span id="songDuration">00:00</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="feature-page" id="feature-quotes">
+        <div class="feature-info">
+          <p class="label">Quote Kelas</p>
+          <h3>Quote random yang terlalu relate.</h3>
+          <p id="randomQuote" class="big-quote">
+            “Santai, masih lama.” — diucapkan 2 jam sebelum deadline.
+          </p>
+        </div>
+
+        <div class="feature-actions">
+          <button id="generateQuote" type="button" class="btn primary">Random Quote</button>
+          <button id="copyQuote" type="button" class="btn soft">Copy Quote</button>
+        </div>
+      </article>
+
+      <article class="feature-page" id="feature-awards">
+        <div class="feature-info">
+          <p class="label">Award Lucu</p>
+          <h3>Bikin penghargaan absurd buat teman kelas.</h3>
+          <p>Masukkan nama teman, terus generate award random.</p>
+        </div>
+
+        <div class="award-box">
+          <input id="awardName" type="text" placeholder="Masukkan nama teman..." />
+          <button id="generateAward" type="button" class="btn primary">Generate Award</button>
+
+          <div class="award-result" id="awardResult">
+            🏆 Award akan muncul di sini.
+          </div>
+        </div>
+      </article>
+
+      <article class="feature-page" id="feature-capsule">
+        <div class="feature-info">
+          <p class="label">Kapsul Waktu</p>
+          <h3>Simpan pesan kecil buat masa depan.</h3>
+          <p>Tulis pesan singkat. Nanti tersimpan di browser kamu.</p>
+        </div>
+
+        <form class="capsule-form" id="capsuleForm">
+          <input id="capsuleName" type="text" placeholder="Nama kamu..." required />
+          <textarea id="capsuleMessage" placeholder="Pesan untuk masa depan..." required></textarea>
+          <button class="btn primary" type="submit">Simpan ke Kapsul</button>
+        </form>
+
+        <div class="capsule-list" id="capsuleList"></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+  <section id="letters" class="section letters-section">
+    <div class="letter-box reveal">
+      <div>
+        <p class="label">Surat Masa Depan</p>
+        <h2>Tulis pesan untuk kita 5 tahun lagi.</h2>
+        <p>
+          Tulis apa pun: harapan, mimpi, pesan lucu, atau sesuatu yang ingin kamu ingat
+          saat hidup sudah berubah jauh.
+        </p>
+      </div>
+
+      <form id="letterForm">
+        <input id="letterName" type="text" placeholder="Nama kamu" required />
+        <textarea id="letterMessage" placeholder="Tulis suratmu di sini..." required></textarea>
+        <button class="btn primary" type="submit">Simpan Surat</button>
+      </form>
+    </div>
+
+    <div class="saved-letters reveal">
+      <h3>Surat yang tersimpan</h3>
+      <div id="lettersList"></div>
+    </div>
+  </section>
+
+  <section class="section final-section">
+    <div class="final-card reveal">
+      <p class="label">Terakhir</p>
+      <h2>Terima kasih sudah pernah menjadi rumah.</h2>
+      <p id="finalQuote">
+        “Kita mungkin berjalan ke arah yang berbeda, tapi pernah berada di cerita yang sama.”
+      </p>
+      <button class="btn soft" id="changeFinalQuote">Ganti Kalimat</button>
+    </div>
+  </section>
+
+  <button id="toTop">↑</button>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button id="closeModal">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 XII.C1 Memories Class · Dibuat untuk kenangan yang tidak ingin hilang 🌿</p>
+  </footer>
+
+<audio id="memoryAudio" preload="metadata"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

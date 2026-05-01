@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buku Kenangan XII.C1</title>
+  <link rel="stylesheet" href="buku.css" />
+</head>
+<body>
+  <canvas id="fireflies"></canvas>
+  <div class="leaves" id="leaves"></div>
+
+  <header class="book-nav">
+    <a href="index.html" class="back-btn">← Kembali</a>
+    <div class="book-title">
+      <span>📖</span>
+      <b>Buku Kenangan XII.C1</b>
+    </div>
+    <button id="themeBtn">🌙</button>
+  </header>
+
+  <main class="book-world">
+    <section class="intro-panel">
+      <p class="label">Digital Yearbook</p>
+      <h1>Buku kecil untuk cerita yang terlalu besar buat dilupakan.</h1>
+      <p>
+        Di sini bukan cuma daftar halaman. Ini tempat cerita kelas disimpan:
+        dari awal yang canggung, masa paling rame, fase capek, sampai hari terakhir yang berat.
+      </p>
+    </section>
+
+    <section class="book-stage">
+      <div class="book-shell">
+        <div class="book-cover">
+          <span class="cover-badge">XII.C1</span>
+          <h2>Our Memory Book</h2>
+          <p>2024 — 2026</p>
+          <div class="cover-flower">✦</div>
+        </div>
+
+        <div class="book-paper">
+          <div class="page-left">
+            <p class="chapter-tag" id="chapterTag">Chapter 1</p>
+            <h2 id="chapterTitle">Awal Masuk</h2>
+            <p id="chapterDate">Juli 2024</p>
+
+            <div class="story-text" id="storyText">
+              Masih saling hafalin nama, masih jaim, masih belum tahu siapa yang paling random.
+              Tahun pertama yang awalnya canggung, tapi justru jadi awal dari semua cerita.
+            </div>
+
+            <div class="quote-box" id="quoteBox">
+              “Dulu kita cuma orang asing yang kebetulan satu kelas.”
+            </div>
+          </div>
+
+          <div class="page-right">
+            <div class="photo-stack" id="photoStack">
+              <figure class="book-photo photo-a">
+                <img src="https://i.imgur.com/XFsvtvQ.jpeg" alt="Foto awal masuk">
+                <figcaption>Awal masuk</figcaption>
+              </figure>
+
+              <figure class="book-photo photo-b">
+                <img src="https://i.imgur.com/F05FDnb.jpeg" alt="Foto kelas">
+                <figcaption>Masih jaim</figcaption>
+              </figure>
+
+              <figure class="book-photo photo-c">
+                <img src="https://i.imgur.com/77u2ifh.jpeg" alt="Foto teman kelas">
+                <figcaption>Mulai kenal</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-controls">
+        <button id="prevBtn">← Sebelumnya</button>
+
+        <div class="chapter-progress">
+          <span id="pageNumber">1 / 5</span>
+          <div class="progress-bar">
+            <i id="progressFill"></i>
+          </div>
+        </div>
+
+        <button id="nextBtn">Selanjutnya →</button>
+      </div>
+
+      <div class="chapter-dots" id="chapterDots"></div>
+    </section>
+
+    <section class="memory-wall">
+      <p class="label">Memory Wall</p>
+      <h2>Potongan kecil dari cerita besar.</h2>
+
+      <div class="memory-grid">
+        <article>
+          <span>🌅</span>
+          <h3>Pagi Sekolah</h3>
+          <p>Datang dengan muka ngantuk, tapi tetap ada aja yang bikin ketawa.</p>
+        </article>
+
+        <article>
+          <span>🍜</span>
+          <h3>Kantin</h3>
+          <p>Tempat kabur sebentar dari tugas, sekaligus tempat cerita random dimulai.</p>
+        </article>
+
+        <article>
+          <span>📚</span>
+          <h3>Deadline</h3>
+          <p>Panik bareng, revisi bareng, lalu pura-pura semuanya aman.</p>
+        </article>
+
+        <article>
+          <span>🎓</span>
+          <h3>Kelulusan</h3>
+          <p>Hari yang ditunggu, tapi ternyata paling susah buat dilepas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="letter-section">
+      <div class="letter-card">
+        <p class="label">Catatan Penutup</p>
+        <h2>Untuk kita yang pernah ada di kelas yang sama.</h2>
+        <p>
+          Suatu hari nanti, mungkin kita sudah jauh. Ada yang kuliah, kerja,
+          merantau, membangun mimpi masing-masing. Tapi semoga saat membuka
+          halaman ini lagi, kita ingat bahwa pernah ada masa sederhana yang
+          ternyata sangat berharga.
+        </p>
+        <a href="index.html#letters" class="final-link">Tulis Surat Masa Depan</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="buku.js"></script>
+</body>
+</html>

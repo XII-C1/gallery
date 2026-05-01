@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri Praktik — XII.C1</title>
+  <!-- Tetap pakai kelulusan.css biar desainnya sama persis -->
+  <link rel="stylesheet" href="kelulusan.css" />
+</head>
+<body>
+  <canvas id="fireflies"></canvas>
+  <div class="falling-leaves" id="leaves"></div>
+
+  <header class="album-nav">
+    <a href="index.html#gallery" class="back-btn">← Kembali</a>
+
+    <div class="album-brand">
+      <span>⚙️</span>
+      <b>Ujian Praktik</b>
+    </div>
+
+    <button id="themeBtn" type="button" title="Mode">☀</button>
+  </header>
+
+  <main>
+    <section class="album-hero">
+      <div class="album-hero-text">
+        <p class="label">Fase Akhir</p>
+        <h1>Panik bareng, revisi bareng, yang penting nilai aman.</h1>
+        <p>
+          Momen di mana kita digempur habis-habisan sama ujian praktik. Kurang tidur, debat sama teman sekelompok, tapi akhirnya semua selesai juga.
+        </p>
+      </div>
+
+      <div 
+        class="album-cover"
+        style="--albumCover:url('image/praktik/cover.jpg');"
+      >
+        <div>
+          <span>XII.C1</span>
+          <h2>Practical Exams</h2>
+          <p>Panik tapi Jadi</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="album-section">
+      <div class="section-head">
+        <p class="label">Album</p>
+        <h2>Kumpulan Dokumentasi Praktik.</h2>
+        <p>
+          Klik salah satu foto untuk melihat ukuran besar.
+        </p>
+      </div>
+
+      <div class="album-grid" id="albumGrid"></div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button id="closeLightbox" type="button">×</button>
+    <button id="prevLightbox" type="button">‹</button>
+    <img id="lightboxImg" src="" alt="Preview foto">
+    <button id="nextLightbox" type="button">›</button>
+  </div>
+
+  <script src="praktik.js"></script>
+</body>
+</html>

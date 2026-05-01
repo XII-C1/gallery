@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri Hari Kelulusan — XII.C1</title>
+  <link rel="stylesheet" href="kelulusan.css" />
+</head>
+<body>
+  <canvas id="fireflies"></canvas>
+  <div class="falling-leaves" id="leaves"></div>
+
+  <header class="album-nav">
+    <a href="index.html#gallery" class="back-btn">← Kembali</a>
+
+    <div class="album-brand">
+      <span>🎓</span>
+      <b>Hari Kelulusan</b>
+    </div>
+
+    <button id="themeBtn" type="button" title="Mode">☀</button>
+  </header>
+
+  <main>
+    <section class="album-hero">
+      <div class="album-hero-text">
+        <p class="label">Galeri Kenangan</p>
+        <h1>Hari terakhir yang rasanya pengen diulang sekali lagi.</h1>
+        <p>
+          Foto-foto kelulusan, perpisahan, pelukan, tawa, dan momen kecil
+          yang nanti bakal jadi cerita paling mahal.
+        </p>
+      </div>
+
+      <div 
+        class="album-cover"
+        style="--albumCover:url('image/kelulusan/cover-kelulusan.jpg');"
+      >
+        <div>
+          <span>XII.C1</span>
+          <h2>Graduation Day</h2>
+          <p>Mei 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="album-section">
+      <div class="section-head">
+        <p class="label">Album</p>
+        <h2>Kumpulan foto kelulusan.</h2>
+        <p>
+          Klik salah satu foto untuk melihat ukuran besar.
+        </p>
+      </div>
+
+      <!-- 
+        Cukup satu wadah ini.
+        Semua foto akan dibuat otomatis oleh kelulusan.js
+      -->
+      <div class="album-grid" id="albumGrid"></div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button id="closeLightbox" type="button">×</button>
+    <button id="prevLightbox" type="button">‹</button>
+    <img id="lightboxImg" src="" alt="Preview foto">
+    <button id="nextLightbox" type="button">›</button>
+  </div>
+
+  <script src="kelulusan.js"></script>
+</body>
+</html>
